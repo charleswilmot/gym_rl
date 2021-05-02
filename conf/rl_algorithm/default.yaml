@@ -1,7 +1,22 @@
 # @package _group_
 agent:
-  - class_name: ???
-  - learning_rate: 1e-3
+  - class_name: DqnAgent
+  - config:
+    - epsilon_greedy: 0.1
+    - n_step_update: 1
+    - boltzmann_temperature: None
+    - target_update_tau: 1.0
+    - target_update_period: 1
+    - gamma: 1.0
+    - reward_scale_factor: 1.0
+    - optimizer:
+      - class_name: Adam
+      - config:
+        - learning_rate: 1e-3
+    - q_network:
+    - target_q_network:
+    - td_errors_loss_fn:
 buffer:
   - class_name: TFUniformReplayBuffer
-  - size: 100000
+  - config:
+    - max_length: 100000
