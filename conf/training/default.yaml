@@ -1,0 +1,5 @@
+# @package _group_
+n_episodes: ???
+evaluate_every: 10
+database_name: trash.db
+record_video: True

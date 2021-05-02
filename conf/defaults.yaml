@@ -1,0 +1,20 @@
+
+defaults:
+  - environment: default
+  - training: default
+  - rl_algorithm: default
+
+
+hydra:
+  run:
+    dir: ../experiments/${now:%Y-%m-%d}/${now:%H-%M-%S}_${hydra.job.override_dirname}
+  sweep:
+    dir: ../experiments/${now:%Y-%m-%d}/${now:%H-%M-%S}/
+    subdir: job${hydra.job.num}_${hydra.job.override_dirname}
+  job:
+    config:
+      # configuration for the ${hydra.job.override_dirname} runtime variable
+      override_dirname:
+        kv_sep: '.'
+        item_sep: '__'
+        exclude_keys: []

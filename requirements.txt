@@ -1,0 +1,6 @@
+tensorflow
+dm-reverb
+tf-agents
+hydra-core
+gym
+sqlite3
