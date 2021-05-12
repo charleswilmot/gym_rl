@@ -1,2 +1,3 @@
 # @package _group_
 name: ???
+action_dim: ${get_action_dim:${environment.name}}

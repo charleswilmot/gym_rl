@@ -3,6 +3,10 @@ defaults:
   - environment: default
   - training: default
   - rl_algorithm: default
+  - networks: default
+  - networks@networks.q_network: default_q_network
+  - networks@networks.actor_network: default_actor_network
+  - networks@networks.value_network: default_value_network
 
 
 hydra:

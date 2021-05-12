@@ -1,0 +1,39 @@
+# @package _group_
+agent:
+  class_name: PPOAgent
+  config:
+    importance_ratio_clipping: 0.0
+    lambda_value: 0.95
+    discount_factor: 0.99
+    entropy_regularization: 0.0
+    policy_l2_reg: 0.0
+    value_function_l2_reg: 0.0
+    shared_vars_l2_reg: 0.0
+    value_pred_loss_coef: 0.5
+    num_epochs: 25
+    use_gae: False
+    use_td_lambda_return: False
+    normalize_rewards: True
+    reward_norm_clipping: 10.0
+    normalize_observations: True
+    log_prob_clipping: 0.0
+    kl_cutoff_factor: 2.0
+    kl_cutoff_coef: 1000.0
+    initial_adaptive_kl_beta: 1.0
+    adaptive_kl_target: 0.01
+    adaptive_kl_tolerance: 0.3
+    gradient_clipping: null
+    value_clipping: null
+    optimizer:
+      class_name: Adam
+      config:
+        learning_rate: 0.001
+        decay: 0.0
+        beta_1: 0.9
+        beta_2: 0.999
+        epsilon: 1e-07
+        amsgrad: False
+buffer:
+  class_name: TFUniformReplayBuffer
+  config:
+    max_length: 100000

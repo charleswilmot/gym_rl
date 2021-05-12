@@ -1,0 +1,3 @@
+# @package _group_
+default_activation_fn: relu
+default_layer_size: 100
